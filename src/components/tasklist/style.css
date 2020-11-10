@@ -1,0 +1,27 @@
+.taskList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1350px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tasksContainer {
+  display: grid;
+  grid-gap: 3rem;
+  padding-top: 2rem;
+  width: 90%;
+}
+
+@media (min-width: 600px) {
+  .tasksContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .tasksContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
