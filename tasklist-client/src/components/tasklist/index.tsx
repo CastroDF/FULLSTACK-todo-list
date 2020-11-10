@@ -6,9 +6,10 @@ import "./style.css";
 
 interface IProps {
   tasks: ITask[];
+  getTasks: () => void;
 }
 
-const TaskList: React.FC<IProps> = ({ tasks }) => {
+const TaskList: React.FC<IProps> = ({ tasks, getTasks }) => {
   return (
     <div className="taskList">
       <TaskCounter number={tasks.length} />
@@ -19,6 +20,7 @@ const TaskList: React.FC<IProps> = ({ tasks }) => {
             title={task.title}
             isDone={task.isDone}
             id={task.id}
+            getTasks={getTasks}
           />
         ))}
       </div>
